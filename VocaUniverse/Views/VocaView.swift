@@ -9,19 +9,38 @@ import SwiftUI
 
 // MARK: - Main Quiz View
 struct VocaView: View {
-    // 수정 필요
-    let word: String
-    let example: String
-    let choices: [String]
-    let correctIndex: Int
-    let step: Int
-    let totalSteps: Int = 5
+
+    let wordList: [WordModel]
     
+    @State private var currentIndex: Int = 0
     @State private var selectedIndex: Int? = nil
     @State private var evaluated: Bool = false
+    @State private var currentChoices: [String] = []
+    
+    
+    private var totalSteps: Int = 5
+    private var currentWord: WordModel {
+        wordList[currentIndex]
+    }
     
     private let backgroundImage = "VocaViewBackground"
     private let catImage = "WowCatHooray"
+    
+//    // 현재 단어의 선택지 배열
+//    private var choices: [String] {
+//        [currentWord.meanKor, currentWord.option1, currentWord.option2]
+//    }
+    
+    // 정답 인덱스
+    private var correctIndex: Int {
+        currentChoices.firstIndex(of: currentWord.meanKor) ?? 0
+    }
+    
+    init(wordList: [WordModel], step: Int = 1) {
+        self.wordList = wordList
+        self.totalSteps = wordList.count
+        self._currentIndex = State(initialValue: step - 1)
+    }
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -31,6 +50,8 @@ struct VocaView: View {
                 .ignoresSafeArea()
             
             VStack {
+                Spacer().frame(height: 40)
+                
                 // Top bar: Close + progress
                 HStack {
                     Button {
@@ -44,7 +65,7 @@ struct VocaView: View {
                     
                     SegmentedProgressBar(
                         totalSteps: totalSteps,
-                        currentStep: step
+                        currentStep: currentIndex + 1
                     )
                     .frame(height: 14)
                 }
@@ -55,21 +76,26 @@ struct VocaView: View {
                 VStack(spacing: 26) {
                     // Word Card
                     WordCardView(
-                        word: word,
-                        example: example
+                        word: currentWord.wordEng,
+                        example: currentWord.exampleEng
                     )
                     .padding(.horizontal, 20)
                     
                     // Choices
                     VStack(spacing: 20) {
-                        ForEach(choices.indices, id: \.self) { idx in
+                        ForEach(currentChoices.indices, id: \.self) { idx in
                             let style = borderStyle(for: idx)
                             WordChoiceRow(
-                                title: choices[idx],
+                                title: currentChoices[idx],
                                 borderStyle: style
                             ) {
                                 selectedIndex = idx
                                 evaluated = true
+                                
+                                // 다음 문제로 이동
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                    moveToNextWord()
+                                }
                             }
                         }
                     }
@@ -88,6 +114,10 @@ struct VocaView: View {
                 .accessibilityHidden(true)
                 .padding(.bottom, 0)
         }
+        .onAppear {
+            setupChoices() // 처음 보여질 때 초기화
+        }
+        .toolbar(.hidden, for: .navigationBar)
     }
     
     private func borderStyle(for index: Int) -> ChoiceBorderStyle {
@@ -104,15 +134,36 @@ struct VocaView: View {
             return .none
         }
     }
+    
+    private func moveToNextWord() {
+        evaluated = false
+        selectedIndex = nil
+        if currentIndex < wordList.count - 1 {
+            currentIndex += 1
+            setupChoices()
+        } else {
+            // 마지막 단어면 종료 처리
+            print("모든 단어 완료!")
+        }
+    }
+    
+    private func setupChoices() {
+        currentChoices = [currentWord.meanKor, currentWord.option1, currentWord.option2].shuffled()
+    }
 }
 
 // MARK: - Preview
 #Preview {
-    VocaView(
-        word: "Apple",
-        example: "I ate an apple for breakfast, and it was crisp and sweet.",
-        choices: ["사과", "복숭아", "수박"],
-        correctIndex: 0,
-        step: 5
-    )
+//    VocaView(
+//        wordModel: WordModel(
+//            wordEng: "Apple",
+//            meanKor: "사과",
+//            exampleEng: "I ate an apple for breakfast, and it was crisp and sweet.",
+//            exampleKor: "나는 아침에 사과를 먹었고, 아주 아삭하고 달콤했다.",
+//            isDone: false,
+//            option1: "복숭아",
+//            option2: "수박"
+//        ),
+//        step: 1
+//    )
 }

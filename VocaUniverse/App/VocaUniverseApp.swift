@@ -33,7 +33,9 @@ struct VocaUniverseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                MainView()
+            }
         }
         .modelContainer(modelContainer)
     }
