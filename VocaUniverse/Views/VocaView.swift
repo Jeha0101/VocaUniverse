@@ -27,11 +27,6 @@ struct VocaView: View {
     private let backgroundImage = "VocaViewBackground"
     private let catImage = "WowCatHooray"
     
-//    // 현재 단어의 선택지 배열
-//    private var choices: [String] {
-//        [currentWord.meanKor, currentWord.option1, currentWord.option2]
-//    }
-    
     // 정답 인덱스
     private var correctIndex: Int {
         currentChoices.firstIndex(of: currentWord.meanKor) ?? 0
@@ -75,14 +70,12 @@ struct VocaView: View {
                 .padding(.bottom, 13)
                 
                 VStack(spacing: 26) {
-                    // Word Card
                     WordCardView(
                         word: currentWord.wordEng,
                         example: currentWord.exampleEng
                     )
                     .padding(.horizontal, 20)
                     
-                    // Choices
                     VStack(spacing: 20) {
                         ForEach(currentChoices.indices, id: \.self) { idx in
                             let style = borderStyle(for: idx)
