@@ -128,12 +128,12 @@ struct StarView: View {
                     Spacer().frame(height: 140)
                     
                     NavigationLink(destination: VocaView(wordList: stars[starName].words, goToQuiz: $goToQuiz, goToStar: $goToStar)) {
-                        BigButton(buttonTitle: quizTitle, action: {})
+                        BigButtonLabel(buttonTitle: quizTitle)
                             .padding(.horizontal, 20)
                             .padding(.bottom, 14)
                     }
                     
-                    BigButton(buttonTitle: vocaTitle, action: {})
+                    BigButtonLabel(buttonTitle: vocaTitle)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 40)
                     
