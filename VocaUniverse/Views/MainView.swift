@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - Main View
 struct CollectStarsView: View {
     var title: String = "Collect the stars"
-    var buttonTitle: String = "Start"
+    var buttonTitle: String = "START"
     
     let mainViewBackground = "MainViewBackground"
     let starsBackground = "StarsBackground"
@@ -45,7 +45,7 @@ struct CollectStarsView: View {
                 Spacer()
                 Image(wowCatLying)
                     .resizable()
-                    .frame(width: 166, height: 166)
+                    .frame(width: 212, height: 212)
                     .padding(.bottom, 145)
             }
             
