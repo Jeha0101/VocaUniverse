@@ -15,15 +15,15 @@ struct DataBootstrapper {
     private let context: ModelContext
     
     private let fileNames = [
-        "GRE prep",
-        "HighSchool Voca",
-        "Instant Vocabulary",
-        "Merriam Webster",
-        "Reading & Vocabulary",
-        "TOEFL",
-        "Vocabulary 22000",
-        "Vocabulary 22000 Ⅱ",
-        "Word Power"
+        "GRE prep", // 0
+        "HighSchool Voca", // 1
+        "Instant Vocabulary", // 2
+        "Merriam Webster", // 3
+        "Reading and Vocabulary", // 4
+        "TOEFL", // 5
+        "Vocabulary 22000", // 6
+        "Vocabulary 22000 Ⅱ", // 7
+        "Word Power" // 8
     ]
     
     private let fileExt = "json"
