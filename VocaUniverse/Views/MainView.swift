@@ -30,15 +30,10 @@ struct MainView: View {
             
             VStack {
                 Spacer()
-                Rectangle()
-                    .foregroundColor(.clear)
+                Image(hill)
+                    .resizable()
+                    .scaledToFill()
                     .frame(height: 379)
-                    .background(
-                        Image(hill)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(height: 379)
-                    )
             }
 
             VStack {
