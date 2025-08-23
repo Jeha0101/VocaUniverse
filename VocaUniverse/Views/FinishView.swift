@@ -88,11 +88,17 @@ struct FinishView: View {
             VStack {
                 Spacer()
                 
-                BigButton(buttonTitle: buttonTitle, action: {
-                })
+//                BigButton(buttonTitle: buttonTitle, action: {
+//\
+//                })
+
+                Button(action: {
+                    dismiss()
+                }) {
+                    BigButtonLabel(buttonTitle: buttonTitle)
+                }
                     .padding(.horizontal, 20)
                     .padding(.bottom, 40)
-                
             }
             .padding(.bottom, 50)
         }

@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct BigButton: View {
+struct BigButtonLabel: View {
     let buttonTitle: String
-    let action: () -> Void
     
     var body: some View {
         Rectangle()
