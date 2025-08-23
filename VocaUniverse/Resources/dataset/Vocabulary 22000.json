@@ -4,34 +4,44 @@
         "wordEng": "facade",
         "meanKor": "(건물의) 정면",
         "exampleEng": "The building has nine large arches along the length of its facade.",
-        "exampleKor": "그 건물 정면을 따라 아홉 개의 아치가 있다."
+        "exampleKor": "그 건물 정면을 따라 아홉 개의 아치가 있다.",
+        "option1": "(건물의) 외관, 앞면",
+        "option2": "(건물의) 내부, 뒷면"
     },
     {
         "Unnamed: 0": 2,
         "wordEng": "laconic",
         "meanKor": "간결한, 말수가 적은",
         "exampleEng": "She had a laconic sense of humor.",
-        "exampleKor": "그녀는 간결한 유머감각을 지니고 있다."
+        "exampleKor": "그녀는 간결한 유머감각을 지니고 있다.",
+        "option1": "간단한, 간결한",
+        "option2": "말이 많은, 장황한"
     },
     {
         "Unnamed: 0": 3,
         "wordEng": "tact",
         "meanKor": "감촉, 재치, 요령",
         "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
-        "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다."
+        "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다.",
+        "option1": "요령, 재치",
+        "option2": "무례함, 서투름"
     },
     {
         "Unnamed: 0": 4,
         "wordEng": "banter",
         "meanKor": "놀리다, (악의 없는) 희롱",
         "exampleEng": "I grew weary of his bantering style of conversation.",
-        "exampleKor": "나는 조롱하는 듯한 그의 대화 스타일에 싫증이 났다."
+        "exampleKor": "나는 조롱하는 듯한 그의 대화 스타일에 싫증이 났다.",
+        "option1": "농담, 희롱",
+        "option2": "진지함, 꾸짖음"
     },
     {
         "Unnamed: 0": 5,
         "wordEng": "abide",
         "meanKor": "머무르다, 살다, 지속하다",
         "exampleEng": "He abided in the wilderness for forty days.",
-        "exampleKor": "그는 40일 동안을 광야에서 생활했다."
+        "exampleKor": "그는 40일 동안을 광야에서 생활했다.",
+        "option1": "머무르다, 살다",
+        "option2": "떠나다, 떠나가다"
     }
 ]

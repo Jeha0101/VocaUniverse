@@ -70,8 +70,8 @@ struct DataBootstrapper {
                     exampleEng: word.exampleEng,
                     exampleKor: word.exampleKor,
                     isDone: false,
-                    option1: "22", //입시값
-                    option2: "33" //임시값
+                    option1: word.option1, //입시값
+                    option2: word.option2 //임시값
                 )
             }
             
@@ -112,6 +112,8 @@ struct DataBootstrapper {
         let meanKor: String
         let exampleEng: String
         let exampleKor: String
+        let option1: String
+        let option2: String
     }
     
     
