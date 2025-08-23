@@ -1,0 +1,37 @@
+[
+    {
+        "Unnamed: 0": 1,
+        "wordEng": "facade",
+        "meanKor": "(건물의) 정면",
+        "exampleEng": "The building has nine large arches along the length of its facade.",
+        "exampleKor": "그 건물 정면을 따라 아홉 개의 아치가 있다."
+    },
+    {
+        "Unnamed: 0": 2,
+        "wordEng": "laconic",
+        "meanKor": "간결한, 말수가 적은",
+        "exampleEng": "She had a laconic sense of humor.",
+        "exampleKor": "그녀는 간결한 유머감각을 지니고 있다."
+    },
+    {
+        "Unnamed: 0": 3,
+        "wordEng": "quarantine",
+        "meanKor": "격리, 검역(소)",
+        "exampleEng": "The horse had to spend several months in quarantine when it reached Britain.",
+        "exampleKor": "그 말은 영국에 도착하자 검역소에서 여러 달을 보내야 했다."
+    },
+    {
+        "Unnamed: 0": 4,
+        "wordEng": "quail",
+        "meanKor": "기가 죽다, 움츠리다, 주눅 들다",
+        "exampleEng": "I was quailing with fear as I opened the envelope containing my exam results.",
+        "exampleKor": "시험 성적표가 담긴 봉투를 열 때 나는 두려워서 주눅이 들었다."
+    },
+    {
+        "Unnamed: 0": 5,
+        "wordEng": "eccentricity",
+        "meanKor": "남다름, 별남, 엉뚱함, 가행(奇行)",
+        "exampleEng": "His eccentricity now extends to never washing or changing his clothes.",
+        "exampleKor": "그의 괴벽은 이제 옷을 절대로 빨지 않거나 옷을 갈아입지 않는 데로 확장해 가고 있다."
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "Unnamed: 0": 1,
+        "wordEng": "habeas corpus",
+        "meanKor": "((법률))인신 보호 영장",
+        "exampleEng": "The applicant sought writ of habeas corpus for his release.",
+        "exampleKor": "그 지원자는 자신의 석방을 위한 출정 영장(구속 적부 심사를 위해 피구속자를 법정에 출두시키는 영장)을 신청했다."
+    },
+    {
+        "Unnamed: 0": 2,
+        "wordEng": "vacate",
+        "meanKor": "~을 비우다, 떠나다, 사임하다",
+        "exampleEng": "Hotel guests are requested to vacate their rooms by noon.",
+        "exampleKor": "호텔 손님들은 정오까지 방을 비워달라고 요청받는다."
+    },
+    {
+        "Unnamed: 0": 3,
+        "wordEng": "tact",
+        "meanKor": "감촉, 재치, 요령",
+        "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
+        "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다."
+    },
+    {
+        "Unnamed: 0": 4,
+        "wordEng": "oblige",
+        "meanKor": "강요하다, 기쁘게 해주다",
+        "exampleEng": "The law obliges companies to pay decent wages to their employees.",
+        "exampleKor": "법에 따라 회사들은 고용인에게 적절한 임금을 지불하지 않으면 안 된다."
+    },
+    {
+        "Unnamed: 0": 5,
+        "wordEng": "habitation",
+        "meanKor": "거주, 주소, 주택, 살기",
+        "exampleEng": "The report described the houses as unfit for human habitation.",
+        "exampleKor": "보도에서 그 집들은 사람의 거주에 적당치 않은 곳으로 묘사되었다."
+    }
+]
