@@ -19,11 +19,7 @@ struct TitleBadge: View {
           .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
           .overlay(
             Text("Collect the stars")
-              .font(
-                //Todo - 폰트 수정
-                Font.custom("SF Pro", size: 16)
-                  .weight(.semibold)
-              )
+                .font(.vu(.black, size: 16))
               .multilineTextAlignment(.center)
               .foregroundColor(.white)
           )

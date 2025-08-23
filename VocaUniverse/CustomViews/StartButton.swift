@@ -27,10 +27,7 @@ struct StartButton: View {
             .cornerRadius(10)
             .overlay(
                 Text(buttonTitle)
-                  .font(
-                    Font.custom("SF Pro", size: 30)
-                      .weight(.black)
-                  )
+                    .font(.vu(.black, size: 30))
                   .kerning(8)
                   .multilineTextAlignment(.center)
                   .foregroundColor(.white)
@@ -41,6 +38,6 @@ struct StartButton: View {
 
 
 #Preview {
-    StartButton(buttonTitle: "Start")
+    StartButton(buttonTitle: "START")
         .padding()
 }
