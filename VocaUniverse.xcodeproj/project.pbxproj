@@ -10,9 +10,22 @@
 		D50872292E595BBE005B646E /* VocaUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocaUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		38CD3BD32E598D27007F4B51 /* Exceptions for "VocaUniverse" folder in "VocaUniverse" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D50872282E595BBE005B646E /* VocaUniverse */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D508722B2E595BBE005B646E /* VocaUniverse */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				38CD3BD32E598D27007F4B51 /* Exceptions for "VocaUniverse" folder in "VocaUniverse" target */,
+			);
 			path = VocaUniverse;
 			sourceTree = "<group>";
 		};
@@ -252,9 +265,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VocaUniverse/Preview Content\"";
-				DEVELOPMENT_TEAM = D4Z83823HG;
+				DEVELOPMENT_TEAM = RW3T7BP2JK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocaUniverse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -281,9 +295,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VocaUniverse/Preview Content\"";
-				DEVELOPMENT_TEAM = D4Z83823HG;
+				DEVELOPMENT_TEAM = RW3T7BP2JK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocaUniverse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
