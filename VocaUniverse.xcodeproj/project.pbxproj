@@ -6,8 +6,41 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D57B574D2E5A10DE00B3757E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57B574C2E5A10DE00B3757E /* WidgetKit.framework */; };
+		D57B574F2E5A10DE00B3757E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57B574E2E5A10DE00B3757E /* SwiftUI.framework */; };
+		D57B57602E5A10DF00B3757E /* ReviewsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D57B574A2E5A10DE00B3757E /* ReviewsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D57B575E2E5A10DF00B3757E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D50872212E595BBE005B646E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D57B57492E5A10DE00B3757E;
+			remoteInfo = ReviewsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D57B57652E5A10DF00B3757E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D57B57602E5A10DF00B3757E /* ReviewsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D50872292E595BBE005B646E /* VocaUniverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocaUniverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57B574A2E5A10DE00B3757E /* ReviewsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReviewsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57B574C2E5A10DE00B3757E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D57B574E2E5A10DE00B3757E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -18,6 +51,20 @@
 			);
 			target = D50872282E595BBE005B646E /* VocaUniverse */;
 		};
+		D57B57642E5A10DF00B3757E /* Exceptions for "Reviews" folder in "ReviewsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D57B57492E5A10DE00B3757E /* ReviewsExtension */;
+		};
+		D57B57692E5A258F00B3757E /* Exceptions for "VocaUniverse" folder in "ReviewsExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/WrongWordsStore.swift,
+			);
+			target = D57B57492E5A10DE00B3757E /* ReviewsExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -25,8 +72,17 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				38CD3BD32E598D27007F4B51 /* Exceptions for "VocaUniverse" folder in "VocaUniverse" target */,
+				D57B57692E5A258F00B3757E /* Exceptions for "VocaUniverse" folder in "ReviewsExtension" target */,
 			);
 			path = VocaUniverse;
+			sourceTree = "<group>";
+		};
+		D57B57502E5A10DE00B3757E /* Reviews */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D57B57642E5A10DF00B3757E /* Exceptions for "Reviews" folder in "ReviewsExtension" target */,
+			);
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +95,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D57B57472E5A10DE00B3757E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57B574F2E5A10DE00B3757E /* SwiftUI.framework in Frameworks */,
+				D57B574D2E5A10DE00B3757E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				D508722B2E595BBE005B646E /* VocaUniverse */,
+				D57B57502E5A10DE00B3757E /* Reviews */,
+				D57B574B2E5A10DE00B3757E /* Frameworks */,
 				D508722A2E595BBE005B646E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +121,18 @@
 			isa = PBXGroup;
 			children = (
 				D50872292E595BBE005B646E /* VocaUniverse.app */,
+				D57B574A2E5A10DE00B3757E /* ReviewsExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D57B574B2E5A10DE00B3757E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D57B574C2E5A10DE00B3757E /* WidgetKit.framework */,
+				D57B574E2E5A10DE00B3757E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -68,10 +145,12 @@
 				D50872252E595BBE005B646E /* Sources */,
 				D50872262E595BBE005B646E /* Frameworks */,
 				D50872272E595BBE005B646E /* Resources */,
+				D57B57652E5A10DF00B3757E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D57B575F2E5A10DF00B3757E /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D508722B2E595BBE005B646E /* VocaUniverse */,
@@ -82,6 +161,28 @@
 			productName = VocaUniverse;
 			productReference = D50872292E595BBE005B646E /* VocaUniverse.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D57B57492E5A10DE00B3757E /* ReviewsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57B57612E5A10DF00B3757E /* Build configuration list for PBXNativeTarget "ReviewsExtension" */;
+			buildPhases = (
+				D57B57462E5A10DE00B3757E /* Sources */,
+				D57B57472E5A10DE00B3757E /* Frameworks */,
+				D57B57482E5A10DE00B3757E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D57B57502E5A10DE00B3757E /* Reviews */,
+			);
+			name = ReviewsExtension;
+			packageProductDependencies = (
+			);
+			productName = ReviewsExtension;
+			productReference = D57B574A2E5A10DE00B3757E /* ReviewsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -94,6 +195,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					D50872282E595BBE005B646E = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					D57B57492E5A10DE00B3757E = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -113,12 +217,20 @@
 			projectRoot = "";
 			targets = (
 				D50872282E595BBE005B646E /* VocaUniverse */,
+				D57B57492E5A10DE00B3757E /* ReviewsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D50872272E595BBE005B646E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57B57482E5A10DE00B3757E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +247,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D57B57462E5A10DE00B3757E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D57B575F2E5A10DF00B3757E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D57B57492E5A10DE00B3757E /* ReviewsExtension */;
+			targetProxy = D57B575E2E5A10DF00B3757E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D50872352E595BBF005B646E /* Debug */ = {
@@ -317,6 +444,62 @@
 			};
 			name = Release;
 		};
+		D57B57622E5A10DF00B3757E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4Z83823HG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reviews/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Reviews;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.jehaHwang.VocaUniverse.Reviews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D57B57632E5A10DF00B3757E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4Z83823HG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Reviews/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Reviews;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.jehaHwang.VocaUniverse.Reviews;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +517,15 @@
 			buildConfigurations = (
 				D50872382E595BBF005B646E /* Debug */,
 				D50872392E595BBF005B646E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57B57612E5A10DF00B3757E /* Build configuration list for PBXNativeTarget "ReviewsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57B57622E5A10DF00B3757E /* Debug */,
+				D57B57632E5A10DF00B3757E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

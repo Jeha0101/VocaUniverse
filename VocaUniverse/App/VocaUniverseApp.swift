@@ -33,7 +33,7 @@ struct VocaUniverseApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
         .modelContainer(modelContainer)
     }
