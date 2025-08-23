@@ -3,12 +3,13 @@ import SwiftUI
 // MARK: - Main View
 struct VocalListView: View {
     var title: String = "Collect the stars"
-    var buttonTitle: String = "START"
     
     let mainViewBackground = "MainViewBackground"
     let starsBackground = "StarsBackground"
     let hill = "Hill"
     let wowCatLying  = "WowCatLying"
+    let activeColor     = Color(red: 44/255, green: 40/255, blue: 87/255)
+    let ringWidth: CGFloat = 2
     
     struct VocabularyWord: Identifiable {
         let id = UUID()
@@ -35,18 +36,6 @@ struct VocalListView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
-            HStack {
-                Button {
-                    // 닫기 동작 (필요 시 바인딩/환경 dismiss로 연결)
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.system(size: 22, weight: .bold))
-                        .foregroundStyle(.white)
-                        .padding(.top, 65)
-                        .padding(.leading, 17)
-                }
-                Spacer()
-            }
             
             VStack {
                 Spacer()
@@ -65,65 +54,76 @@ struct VocalListView: View {
                 
                 
             }
-            HStack(alignment: .top) {
-                Spacer()
-                VStack {
+            
+            VStack {
+                HStack {
+                    Button {
+                        // 닫기 동작 (필요 시 바인딩/환경 dismiss로 연결)
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 22, weight: .bold))
+                            .foregroundStyle(.white)
+                    }
+                    Spacer()
                     TitleBadge(text: title)
-                        .padding(.top, 70)
-                        .padding(.horizontal, 65)
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+                .padding(.top, 50)
+                .padding(.bottom, 26)
+                
+                ZStack { // MARK: 단어장 큰 네모
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .background(.white.opacity(0.9))
+                        .cornerRadius(10)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 40)
                     
-                    ZStack { // MARK: 단어장 큰 네모
-                        Rectangle()
-                            .foregroundColor(.clear)
-                            .frame(width: 353, height: 666)
-                            .background(.white.opacity(0.9))
-                            .cornerRadius(10)
-                        
-                        VStack(spacing: 24) {
-                            // Custom dots row
-                            HStack(spacing: 14) {
-                                ForEach(0..<5) { index in
-                                    Circle()
-                                        .fill(index == 0 ? Color(red: 44/255, green: 40/255, blue: 87/255) : Color(red: 227/255, green: 224/255, blue: 244/255))
-                                        .frame(width: 12, height: 12)
-                                }
-                            }
-                            .frame(maxWidth: .infinity)
-                            .padding(.top, 24)
-                            
-                            // Cards list
-                            VStack(spacing: 16) {
-                                ForEach(vocabularyWords) { vocab in
-                                    VStack(alignment: .leading, spacing: 6) {
-                                        Text(vocab.word)
-                                            .font(.system(size: 24, weight: .black))
-                                            .foregroundColor(Color(red: 9/255, green: 10/255, blue: 52/255))
-                                        Text(vocab.meaning)
-                                            .font(.system(size: 14, weight: .bold))
-                                            .foregroundColor(Color(red: 9/255, green: 10/255, blue: 52/255))
-                                        Text(vocab.example)
-                                            .font(.system(size: 11, weight: .medium))
-                                            .foregroundColor(Color(red: 88/255, green: 88/255, blue: 88/255))
-                                            .fixedSize(horizontal: false, vertical: true)
-                                    }
-                                    .padding(16)
-                                    .frame(width: 329, alignment: .leading)
-                                    .background(Color.white)
+                    VStack {
+                        // Custom dots row
+                        HStack(spacing: 14) {
+                            ForEach(0..<5) { index in
+                                Circle()
+                                    .fill(index == 0 ? activeColor : Color(red: 227/255, green: 224/255, blue: 244/255))
+                                    .frame(width: 12, height: 12)
                                     .overlay(
-                                        RoundedRectangle(cornerRadius: 10)
-                                            .stroke(Color(red: 187/255, green: 176/255, blue: 206/255), lineWidth: 2)
+                                        Circle().stroke(activeColor, lineWidth: ringWidth) // 테두리
                                     )
-                                }
+                                
                             }
-                            Spacer()
                         }
-                        .padding(.horizontal, 12)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 20)
+                        
+                        // Cards list
+                        VStack (spacing: 16){
+                            ForEach(vocabularyWords) { vocab in
+                                VStack(alignment: .leading) {
+                                    Text(vocab.word)
+                                        .font(.system(size: 24, weight: .black))
+                                        .foregroundColor(Color(red: 9/255, green: 10/255, blue: 52/255))
+                                    Text(vocab.meaning)
+                                        .font(.system(size: 14, weight: .bold))
+                                        .foregroundColor(Color(red: 9/255, green: 10/255, blue: 52/255))
+                                    Text(vocab.example)
+                                        .font(.system(size: 11, weight: .medium))
+                                        .foregroundColor(Color(red: 88/255, green: 88/255, blue: 88/255))
+                                        .fixedSize(horizontal: false, vertical: true)
+                                }
+                                .padding(16)
+                                .frame(width: 329, alignment: .leading)
+                                .background(Color.white)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(red: 187/255, green: 176/255, blue: 206/255), lineWidth: 2)
+                                )
+                            }
+                        }
+                        Spacer()
                     }
                 }
-                Spacer()
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            
         }
         
     }
