@@ -1,5 +1,5 @@
 //
-//  StartButton.swift
+//  BigButton.swift
 //  VocaUniverse
 //
 //  Created by 제하맥 on 8/23/25.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StartButton: View {
+struct BigButton: View {
     let buttonTitle: String
     
     var body: some View {
@@ -38,6 +38,6 @@ struct StartButton: View {
 
 
 #Preview {
-    StartButton(buttonTitle: "START")
+    BigButton(buttonTitle: "START")
         .padding()
 }
