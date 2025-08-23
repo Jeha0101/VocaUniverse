@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BigButton: View {
     let buttonTitle: String
+    let action: () -> Void
     
     var body: some View {
         Rectangle()
@@ -38,6 +39,6 @@ struct BigButton: View {
 
 
 #Preview {
-    BigButton(buttonTitle: "START")
-        .padding()
+    //BigButton(buttonTitle: "START")
+    //    .padding()
 }
