@@ -27,7 +27,7 @@ struct WordChoiceRow: View {
     var body: some View {
         Button(action: action) {
             Text(title)
-                .font(.system(size: 30, weight: .black))
+                .font(.vu(.black, size: 22))
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity, minHeight: 74, alignment: .center)

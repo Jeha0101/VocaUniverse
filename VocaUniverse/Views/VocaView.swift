@@ -16,6 +16,7 @@ struct VocaView: View {
     @State private var selectedIndex: Int? = nil
     @State private var evaluated: Bool = false
     @State private var currentChoices: [String] = []
+    @State private var correctCount = 0
     
     
     private var totalSteps: Int = 5
@@ -25,11 +26,6 @@ struct VocaView: View {
     
     private let backgroundImage = "VocaViewBackground"
     private let catImage = "WowCatHooray"
-    
-//    // 현재 단어의 선택지 배열
-//    private var choices: [String] {
-//        [currentWord.meanKor, currentWord.option1, currentWord.option2]
-//    }
     
     // 정답 인덱스
     private var correctIndex: Int {
@@ -74,14 +70,12 @@ struct VocaView: View {
                 .padding(.bottom, 13)
                 
                 VStack(spacing: 26) {
-                    // Word Card
                     WordCardView(
                         word: currentWord.wordEng,
                         example: currentWord.exampleEng
                     )
                     .padding(.horizontal, 20)
                     
-                    // Choices
                     VStack(spacing: 20) {
                         ForEach(currentChoices.indices, id: \.self) { idx in
                             let style = borderStyle(for: idx)
@@ -89,13 +83,19 @@ struct VocaView: View {
                                 title: currentChoices[idx],
                                 borderStyle: style
                             ) {
-                                selectedIndex = idx
-                                evaluated = true
-                                
-                                // 다음 문제로 이동
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                    moveToNextWord()
-                                }
+                                if !evaluated { // 중복 클릭 방지
+                                       selectedIndex = idx
+                                       evaluated = true
+                                       
+                                       if idx == correctIndex {
+                                           correctCount += 1
+                                       }
+                                       
+                                       // 다음 문제로 이동
+                                       DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                           moveToNextWord()
+                                       }
+                                   }
                             }
                         }
                     }
