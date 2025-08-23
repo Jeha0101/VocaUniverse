@@ -8,7 +8,7 @@
 import SwiftUI
 
 // MARK: - Main View
-struct CollectStarsView: View {
+struct MainView: View {
     var title: String = "Collect the stars"
     var buttonTitle: String = "START"
     
@@ -67,5 +67,5 @@ struct CollectStarsView: View {
 
 // MARK: - Preview
 #Preview {
-    CollectStarsView()
+    MainView()
 }
