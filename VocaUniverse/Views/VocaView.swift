@@ -16,6 +16,7 @@ struct VocaView: View {
     @State private var selectedIndex: Int? = nil
     @State private var evaluated: Bool = false
     @State private var currentChoices: [String] = []
+    @State private var correctCount = 0
     
     
     private var totalSteps: Int = 5
@@ -89,13 +90,19 @@ struct VocaView: View {
                                 title: currentChoices[idx],
                                 borderStyle: style
                             ) {
-                                selectedIndex = idx
-                                evaluated = true
-                                
-                                // 다음 문제로 이동
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                    moveToNextWord()
-                                }
+                                if !evaluated { // 중복 클릭 방지
+                                       selectedIndex = idx
+                                       evaluated = true
+                                       
+                                       if idx == correctIndex {
+                                           correctCount += 1
+                                       }
+                                       
+                                       // 다음 문제로 이동
+                                       DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                           moveToNextWord()
+                                       }
+                                   }
                             }
                         }
                     }

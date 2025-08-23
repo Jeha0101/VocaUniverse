@@ -22,7 +22,7 @@ struct WordCardView: View {
                 .lineLimit(1)
             
             Text(example)
-                .font(.vu(.semibold, size: 12))
+                .font(.vu(.semibold, size: 14))
                 .foregroundStyle(Color(hex: textColor))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 10)
