@@ -67,7 +67,7 @@ struct FinishView: View {
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
                 
-                StartButton(buttonTitle: buttonTitle)
+                BigButton(buttonTitle: buttonTitle)
                     .padding(.horizontal, 20)
                     .padding(.bottom, 40)
                 
