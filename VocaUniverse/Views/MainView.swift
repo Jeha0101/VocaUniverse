@@ -13,15 +13,34 @@ struct MainView: View {
     @Environment(\.modelContext) private var modelContext
     @Query var stars: [StarModel]
     
+    @State private var goToStar: Bool = false
+    @State private var selectedStarIndex: Int? = nil
+    
     var title: String = "Choose one of the planets"
-    var buttonTitle: String = "START"
+    //var buttonTitle: String = "START"
     
     let mainViewBackground = "MainViewBackground"
     let starsBackground = "StarsBackground"
     let hill = "Hill"
     let wowCatLying  = "WowCatLying"
     
+    
+
     var body: some View {
+        ZStack {
+            if goToStar, let index = selectedStarIndex {
+                StarView(goToStar: $goToStar, stars: stars, starName: index)
+                    .transition(.opacity)
+            } else {
+                mainview
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut(duration: 0.5), value: goToStar)
+
+    }
+    
+    var mainview: some View {
         ZStack(alignment: .top) {
             // Background
             Image(mainViewBackground)
@@ -36,85 +55,32 @@ struct MainView: View {
                 Spacer()
                 
                 HStack(spacing: 90) {
-                    NavigationLink(destination: StarView(stars: stars, starName: 0)) {
-                        Image("GRE prep")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    
-                    NavigationLink(destination: StarView(stars: stars, starName: 5)) {
-                        Image("TOEFL")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .offset(x: 40, y: 15)
+                    starButton(imageName: "GRE prep", index: 0, size: CGSize(width: 45, height: 45))
+                    starButton(imageName: "TOEFL", index: 5, size: CGSize(width: 80, height: 80))
+                        .offset(x: 40, y: 15)
                 }
                 
                 HStack(spacing: 62) {
-                    NavigationLink(destination: StarView(stars: stars, starName: 1)) {
-                        Image("Highschool Voca")
-                            .resizable()
-                            .frame(width: 49, height: 49)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .offset(x: -25)
-                    
-                    NavigationLink(destination: StarView(stars: stars, starName: 3)) {
-                        Image("Merriam Webster")
-                            .resizable()
-                            .frame(width: 59, height: 59)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .offset(y: -40)
-                    
-                    NavigationLink(destination: StarView(stars: stars, starName: 8)) {
-                        Image("Word Power")
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .offset(x: -20, y: 25)
+                    starButton(imageName: "Highschool Voca", index: 1, size: CGSize(width: 49, height: 49))
+                        .offset(x: -25)
+                    starButton(imageName: "Merriam Webster", index: 3, size: CGSize(width: 59, height: 59))
+                        .offset(y: -40)
+                    starButton(imageName: "Word Power", index: 8, size: CGSize(width: 50, height: 50))
+                        .offset(x: -20, y: 25)
                 }
                 
-                NavigationLink(destination: StarView(stars: stars, starName: 4)) {
-                    Image("Reading and Vocabulary")
-                        .resizable()
-                        .frame(width: 46, height: 46)
-                }
-                .buttonStyle(PlainButtonStyle())
-                .offset(x: -80)
+                starButton(imageName: "Reading and Vocabulary", index: 4, size: CGSize(width: 46, height: 46))
+                    .offset(x: -80)
                 
                 HStack(spacing: 74) {
-                    NavigationLink(destination: StarView(stars: stars, starName: 7)) {
-                        Image("Vocabulary 22000 Ⅱ")
-                            .resizable()
-                            .frame(width: 69, height: 69)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    NavigationLink(destination: StarView(stars: stars, starName: 6)) {
-                        Image("Vocabulary 22000")
-                            .resizable()
-                            .frame(width: 51, height: 51)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .offset(x: 35, y: -50)
-                    
-                    NavigationLink(destination: StarView(stars: stars, starName: 2)) {
-                        Image("Instant Vocabulary")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                    }
-                    .buttonStyle(PlainButtonStyle())
+                    starButton(imageName: "Vocabulary 22000 Ⅱ", index: 7, size: CGSize(width: 69, height: 69))
+                    starButton(imageName: "Vocabulary 22000", index: 6, size: CGSize(width: 51, height: 51))
+                        .offset(x: 35, y: -50)
+                    starButton(imageName: "Instant Vocabulary", index: 2, size: CGSize(width: 80, height: 80))
                 }
                 .padding(.bottom, 300)
 
                 
-                //Spacer()
             }
 
             
@@ -141,11 +107,11 @@ struct MainView: View {
                 
                 Spacer(minLength: 0)
                 
-//                NavigationLink(destination: StarView(stars: stars) {
-//                    BigButton(buttonTitle: buttonTitle)
-//                        .padding(.horizontal, 20)
-//                        .padding(.bottom, 40)
-//                }
+    //                NavigationLink(destination: StarView(stars: stars) {
+    //                    BigButton(buttonTitle: buttonTitle)
+    //                        .padding(.horizontal, 20)
+    //                        .padding(.bottom, 40)
+    //                }
             }
         }
         .onAppear {
@@ -169,6 +135,22 @@ struct MainView: View {
             }
         }
     }
+    
+    // 별 버튼 생성 함수
+    private func starButton(imageName: String, index: Int, size: CGSize) -> some View {
+        Button {
+            withAnimation {
+                selectedStarIndex = index
+                goToStar = true
+            }
+        } label: {
+            Image(imageName)
+                .resizable()
+                .frame(width: size.width, height: size.height)
+        }
+        .buttonStyle(PlainButtonStyle())
+    }
+    
 }
 
 // MARK: - Preview

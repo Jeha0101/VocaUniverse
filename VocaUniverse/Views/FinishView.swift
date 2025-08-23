@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct FinishView: View {
+    @Environment(\.dismiss) private var dismiss
+    
     // 맞춘 문제 개수 받아오기
     var count: Int
     var buttonTitle: String = "CHECK"
+    var onMain: (() -> Void)?
+    
+    @State private var goToMain: Bool = false
     
     let mainViewBackground = "MainViewBackground"
     let starsBackground = "StarsBackground"
@@ -24,7 +29,23 @@ struct FinishView: View {
         }
         private var solvedCountImageName: String { solvedCount.imageName }
     
+
     var body: some View {
+        ZStack {
+            if goToMain {
+                MainView()
+                    .transition(.opacity)
+            }
+            else {
+                completeview
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut(duration: 0.5), value: goToMain)
+    }
+    
+    
+    var completeview: some View {
         ZStack(alignment: .top) {
             // Background
             Image(mainViewBackground)
@@ -64,16 +85,21 @@ struct FinishView: View {
                     .padding(.bottom, 145)
             }
             
-            VStack(spacing: 0) {
-                Spacer(minLength: 0)
+            VStack {
+                Spacer()
                 
-                BigButton(buttonTitle: buttonTitle)
+                BigButton(buttonTitle: buttonTitle, action: {
+                })
                     .padding(.horizontal, 20)
                     .padding(.bottom, 40)
                 
             }
+            .padding(.bottom, 50)
         }
+        .toolbar(.hidden, for: .navigationBar)
+        
     }
+    
     
 }
 

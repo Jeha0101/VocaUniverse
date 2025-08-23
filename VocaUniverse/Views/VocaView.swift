@@ -9,8 +9,14 @@ import SwiftUI
 
 // MARK: - Main Quiz View
 struct VocaView: View {
-
+    @Environment(\.dismiss) private var dismiss
     let wordList: [WordModel]
+    
+    @Binding var goToQuiz: Bool
+    @Binding var goToStar: Bool
+    
+    @State private var goToFinish: Bool = false
+    //@State private var goToVocaList: Bool = false
     
     @State private var currentIndex: Int = 0
     @State private var selectedIndex: Int? = nil
@@ -32,13 +38,36 @@ struct VocaView: View {
         currentChoices.firstIndex(of: currentWord.meanKor) ?? 0
     }
     
-    init(wordList: [WordModel], step: Int = 1) {
+    init(wordList: [WordModel], goToQuiz: Binding<Bool>, goToStar: Binding<Bool>, step: Int = 1) {
         self.wordList = wordList
         self.totalSteps = wordList.count
+        self._goToQuiz = goToQuiz
+        self._goToStar = goToStar
         self._currentIndex = State(initialValue: step - 1)
     }
     
     var body: some View {
+        ZStack {
+            if goToFinish {
+                FinishView(count: correctCount) {
+                    withAnimation {
+                        goToFinish = false
+                        goToQuiz = false
+                        goToStar = false
+                    }
+                }
+                    .transition(.opacity)
+                    
+            } else {
+                quizview
+                    .transition(.opacity)
+            }
+            
+        }
+        .animation(.easeInOut(duration: 0.5), value: goToFinish)
+    }
+    
+    var quizview: some View {
         ZStack(alignment: .bottom) {
             Image(backgroundImage)
                 .resizable()
@@ -51,7 +80,7 @@ struct VocaView: View {
                 // Top bar: Close + progress
                 HStack {
                     Button {
-                        // 닫기 동작 (필요 시 바인딩/환경 dismiss로 연결)
+                        dismiss()
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 22, weight: .bold))
@@ -142,7 +171,10 @@ struct VocaView: View {
             currentIndex += 1
             setupChoices()
         } else {
-            // 마지막 단어면 종료 처리
+            withAnimation {
+                goToFinish = true
+//                goToStar = true
+            }
             print("모든 단어 완료!")
         }
     }
