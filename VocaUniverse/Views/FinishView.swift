@@ -89,11 +89,15 @@ struct FinishView: View {
                 Spacer()
                 
 //                BigButton(buttonTitle: buttonTitle, action: {
-//\
+//
 //                })
 
                 Button(action: {
-                    dismiss()
+                    //dismiss()
+                    withAnimation {
+                        goToMain = true
+                    }
+
                 }) {
                     BigButtonLabel(buttonTitle: buttonTitle)
                 }

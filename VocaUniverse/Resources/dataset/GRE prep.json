@@ -6,7 +6,8 @@
         "exampleEng": "The building has nine large arches along the length of its facade.",
         "exampleKor": "그 건물 정면을 따라 아홉 개의 아치가 있다.",
         "option1": "외관, 겉모습",
-        "option2": "내부 구조, 설계"
+        "option2": "내부 구조, 설계",
+        "star": "GRE prep"
     },
     {
         "Unnamed: 0": 2,
@@ -15,7 +16,8 @@
         "exampleEng": "She had a laconic sense of humor.",
         "exampleKor": "그녀는 간결한 유머감각을 지니고 있다.",
         "option1": "장황한, 수다스러운",
-        "option2": "단순한"
+        "option2": "단순한",
+        "star": "GRE prep"
     },
     {
         "Unnamed: 0": 3,
@@ -24,7 +26,8 @@
         "exampleEng": "The horse had to spend several months in quarantine when it reached Britain.",
         "exampleKor": "그 말은 영국에 도착하자 검역소에서 여러 달을 보내야 했다.",
         "option1": "검사, 검사절차",
-        "option2": "자유, 방종"
+        "option2": "자유, 방종",
+        "star": "GRE prep"
     },
     {
         "Unnamed: 0": 4,
@@ -33,7 +36,8 @@
         "exampleEng": "I was quailing with fear as I opened the envelope containing my exam results.",
         "exampleKor": "시험 성적표가 담긴 봉투를 열 때 나는 두려워서 주눅이 들었다.",
         "option1": "겁내다, 두려워하다",
-        "option2": "용감하다, 맞서다"
+        "option2": "용감하다, 맞서다",
+        "star": "GRE prep"
     },
     {
         "Unnamed: 0": 5,
@@ -42,6 +46,7 @@
         "exampleEng": "His eccentricity now extends to never washing or changing his clothes.",
         "exampleKor": "그의 괴벽은 이제 옷을 절대로 빨지 않거나 옷을 갈아입지 않는 데로 확장해 가고 있다.",
         "option1": "평범함, 일반성",
-        "option2": "기이함, 괴상함"
+        "option2": "기이함, 괴상함",
+        "star": "GRE prep"
     }
 ]

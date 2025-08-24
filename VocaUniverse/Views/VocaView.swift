@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 // MARK: - Main Quiz View
 struct VocaView: View {
+    @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     let wordList: [WordModel]
     
@@ -116,15 +118,24 @@ struct VocaView: View {
                                        selectedIndex = idx
                                        evaluated = true
                                        
-                                       if idx == correctIndex {
-                                           correctCount += 1
-                                       }
+
+                                    if idx == correctIndex {
+                                        // 정답일 때 완료 처리
+                                        currentWord.isDone = true
+                                        correctCount += 1
+                                        do {
+                                            try modelContext.save()
+                                            print("저장 성공: \(currentWord.wordEng)")
+                                        } catch {
+                                            print("저장 실패: \(error)")
+                                        }
+                                    }
                                        
-                                       // 다음 문제로 이동
-                                       DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                           moveToNextWord()
-                                       }
-                                   }
+                                    // 다음 문제로 이동
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                        moveToNextWord()
+                                    }
+                                }
                             }
                         }
                     }
@@ -144,7 +155,7 @@ struct VocaView: View {
                 .padding(.bottom, 0)
         }
         .onAppear {
-            setupChoices() // 처음 보여질 때 초기화
+            setupChoices()
         }
         .toolbar(.hidden, for: .navigationBar)
     }
@@ -167,13 +178,14 @@ struct VocaView: View {
     private func moveToNextWord() {
         evaluated = false
         selectedIndex = nil
+        
         if currentIndex < wordList.count - 1 {
             currentIndex += 1
             setupChoices()
         } else {
+            updateStarProgress()
             withAnimation {
                 goToFinish = true
-//                goToStar = true
             }
             print("모든 단어 완료!")
         }
@@ -181,6 +193,51 @@ struct VocaView: View {
     
     private func setupChoices() {
         currentChoices = [currentWord.meanKor, currentWord.option1, currentWord.option2].shuffled()
+    }
+    
+    private func updateStarProgress() {
+        guard let starName = wordList.first?.star else {
+            print("Star 이름을 찾을 수 없음")
+            return
+        }
+
+        // 동일한 star를 가진 단어들 전체를 쿼리
+        let descriptor = FetchDescriptor<WordModel>(
+            predicate: #Predicate { $0.star == starName }
+        )
+
+        guard let allWordsForStar = try? modelContext.fetch(descriptor),
+              let star = getStarForCurrentQuiz() else {
+            print("Star 또는 단어 목록을 찾을 수 없음")
+            return
+        }
+
+        let doneCount = allWordsForStar.filter { $0.isDone }.count
+        let totalCount = allWordsForStar.count
+
+        star.progress = totalCount > 0 ? Double(doneCount) / Double(totalCount) : 0
+
+        do {
+            try modelContext.save()
+            print("진행도 저장 완료: \(star.progress)")
+            print("=== Star Progress Update ===")
+            print("Star: \(starName)")
+            print("완료 단어: \(doneCount), 전체 단어: \(totalCount)")
+            print("새 진행도: \(Double(doneCount) / Double(totalCount))")
+        } catch {
+            print("진행도 저장 실패: \(error)")
+        }
+    }
+
+    
+    private func getStarForCurrentQuiz() -> StarModel? {
+        guard let starName = wordList.first?.star else { return nil }
+
+        let descriptor = FetchDescriptor<StarModel>(
+            predicate: #Predicate { $0.title == starName }
+        )
+
+        return try? modelContext.fetch(descriptor).first
     }
 }
 

@@ -6,7 +6,8 @@
         "exampleEng": "“Am I my brother's keeper?”",
         "exampleKor": "“내가 우리 형의 보호자야?”",
         "option1": "관리자, 주인",
-        "option2": "관객, 구경꾼"
+        "option2": "관객, 구경꾼",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 2,
@@ -15,7 +16,8 @@
         "exampleEng": "“What a quaint idea!” she said, laughing at him.",
         "exampleKor": "“정말 진기한 생각이야!”라고 그녀는 그를 비웃으며 말했다.",
         "option1": "평범한, 일반적인",
-        "option2": "기괴한, 이상한"
+        "option2": "기괴한, 이상한",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 3,
@@ -24,7 +26,8 @@
         "exampleEng": "A horse naturally shifts from a trot to a gallop.",
         "exampleKor": "말은 자연스럽게 속보에서 질주로 속도를 바꾼다.",
         "option1": "느린 속도, 걷기",
-        "option2": "점프, 뛰어오름"
+        "option2": "점프, 뛰어오름",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 4,
@@ -33,7 +36,8 @@
         "exampleEng": "A long suspension bridge joins the two islands.",
         "exampleKor": "긴 현수교가 두 섬을 연결한다.",
         "option1": "분리하다, 나누다",
-        "option2": "관찰하다, 바라보다"
+        "option2": "관찰하다, 바라보다",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 5,
@@ -42,7 +46,8 @@
         "exampleEng": "A single beam of light radiated from the lighthouse.",
         "exampleKor": "한줄기 빛이 등대로부터 비추었다.",
         "option1": "흡수하다, 받아들이다",
-        "option2": "퍼지다, 방출하다"
+        "option2": "퍼지다, 방출하다",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 6,
@@ -51,7 +56,8 @@
         "exampleEng": "As soon as I mentioned her, Colin started giving me knowing looks.",
         "exampleKor": "내가 그녀의 이름을 말하자마자, 콜린은 나에게 아는 체하는 표정을 짓기 시작했다.",
         "option1": "모르는, 무지한",
-        "option2": "현명한, 똑똑한"
+        "option2": "현명한, 똑똑한",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 7,
@@ -60,7 +66,8 @@
         "exampleEng": "At the International School they have pupils of 46 different nationality.",
         "exampleKor": "국제 학교에는 마흔 여섯 개 나라 출신의 학생들이 있다.",
         "option1": "지역, 지방",
-        "option2": "문화, 언어"
+        "option2": "문화, 언어",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 8,
@@ -69,7 +76,8 @@
         "exampleEng": "Canvas boots are all right, but they're not as waterproof as leather.",
         "exampleKor": "캔버스 천으로 된 장화도 괜찮긴 하지만, 가죽처럼 방수가 되지는 않는다.",
         "option1": "방수 불가, 젖는",
-        "option2": "방염, 내열성"
+        "option2": "방염, 내열성",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 9,
@@ -78,7 +86,8 @@
         "exampleEng": "Checking the entire report for mistakes was a laborious business.",
         "exampleKor": "실수를 찾아내기 위해 전체 보고서를 다 검토하는 것은 힘든 일이었다.",
         "option1": "쉬운, 간단한",
-        "option2": "게으른, 나태한"
+        "option2": "게으른, 나태한",
+        "star": "HighSchool Voca"
     },
     {
         "Unnamed: 0": 10,
@@ -87,6 +96,7 @@
         "exampleEng": "Chris has just qualified as a doctor.",
         "exampleKor": "크리스는 이제 막 의사 자격을 얻었다.",
         "option1": "제한하다, 제한 받다",
-        "option2": "박탈하다, 제외하다"
+        "option2": "박탈하다, 제외하다",
+        "star": "HighSchool Voca"
     }
 ]

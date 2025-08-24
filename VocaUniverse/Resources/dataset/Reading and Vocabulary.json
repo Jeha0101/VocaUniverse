@@ -6,7 +6,8 @@
         "exampleEng": "The sages will tell you that when you can see those distant hills, it’ s going to rain.",
         "exampleKor": "현인들은 당신에게 저 멀리있는 언덕들이 보이면 비가 오리라는 것을 말해 줄 것이다.",
         "option1": "현자, 지혜로운 사람",
-        "option2": "어리석은 사람, 무지한"
+        "option2": "어리석은 사람, 무지한",
+        "star": "Reading and Vocabulary"
     },
     {
         "Unnamed: 0": 2,
@@ -15,7 +16,8 @@
         "exampleEng": "As we entered the farmyard, we were met with a cacophony of animal sound.",
         "exampleKor": "농가 마당에 들어서자 동물들이 내는 불협화음이 우리를 맞았다.",
         "option1": "화음, 조화로운 소리",
-        "option2": "잡음, 소음"
+        "option2": "잡음, 소음",
+        "star": "Reading and Vocabulary"
     },
     {
         "Unnamed: 0": 3,
@@ -24,7 +26,8 @@
         "exampleEng": "She knew that by failing her exams she could jeopardize her whole future.",
         "exampleKor": "그녀는 시험에 떨어지면 자신의 장래가 위태로울 수 있음을 알고 있었다.",
         "option1": "보호하다, 안전하게 하다",
-        "option2": "위험에 빠뜨리다, 해치다"
+        "option2": "위험에 빠뜨리다, 해치다",
+        "star": "Reading and Vocabulary"
     },
     {
         "Unnamed: 0": 4,
@@ -33,7 +36,8 @@
         "exampleEng": "Environmentalists argue that more goods should be transported by rail.",
         "exampleKor": "환경론자들은 더 많은 물건을 철도로 운송해야 한다고 주장한다.",
         "option1": "도로, 길",
-        "option2": "울타리, 난간"
+        "option2": "울타리, 난간",
+        "star": "Reading and Vocabulary"
     },
     {
         "Unnamed: 0": 5,
@@ -42,6 +46,7 @@
         "exampleEng": "We grew tired of his frequent facetious remarks.",
         "exampleKor": "우리는 그가 빈번하게 늘어 놓는 소리에 싫증이 났다.",
         "option1": "진지한, 심각한",
-        "option2": "익살스러운, 장난스러운"
+        "option2": "익살스러운, 장난스러운",
+        "star": "Reading and Vocabulary"
     }
 ]
