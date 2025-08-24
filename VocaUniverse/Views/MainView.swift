@@ -129,11 +129,13 @@ struct MainView: View {
                              의미: \(word.meanKor)
                              예문(ENG): \(word.exampleEng)
                              예문(KOR): \(word.exampleKor)
+                             완료: \(word.isDone)
                           """)
                 }
                 print("---------------------------")
             }
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
     
     // 별 버튼 생성 함수

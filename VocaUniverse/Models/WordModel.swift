@@ -19,6 +19,7 @@ final class WordModel {
     var isDone: Bool
     var option1: String
     var option2: String
+    var star: String
 
     
     init(id: UUID = UUID(),
@@ -28,7 +29,8 @@ final class WordModel {
          exampleKor: String,
          isDone: Bool,
          option1: String,
-         option2: String) {
+         option2: String,
+         star: String) {
         self.id = id
         self.wordEng = wordEng
         self.meanKor = meanKor
@@ -37,5 +39,6 @@ final class WordModel {
         self.isDone = isDone
         self.option1 = option1
         self.option2 = option2
+        self.star = star
     }
 }

@@ -6,7 +6,8 @@
         "exampleEng": "Elvis Presley, Marilyn Monore and James Dean are still icons for many young people.",
         "exampleKor": "엘비스 프레슬리, 마릴린 먼로, 제임스 딘은 여전히 많은 젊은이에게 우상이다.",
         "option1": "평범한 인물, 일반 사람",
-        "option2": "동상, 조각상"
+        "option2": "동상, 조각상",
+        "star": "Merriam Webster"
     },
     {
         "Unnamed: 0": 2,
@@ -15,7 +16,8 @@
         "exampleEng": "As we entered the farmyard, we were met with a cacophony of animal sound.",
         "exampleKor": "농가 마당에 들어서자 동물들이 내는 불협화음이 우리를 맞았다.",
         "option1": "조화, 화음",
-        "option2": "소음, 잡음"
+        "option2": "소음, 잡음",
+        "star": "Merriam Webster"
     },
     {
         "Unnamed: 0": 3,
@@ -24,7 +26,8 @@
         "exampleEng": "Don't you think it's eccentric to keep a pet crocodile in the bath?",
         "exampleKor": "애완용 악어를 욕조에서 키우는 건 별난 일이라고 생각지 않으십니까?",
         "option1": "평범한, 정상적인",
-        "option2": "기묘한, 이상한"
+        "option2": "기묘한, 이상한",
+        "star": "Merriam Webster"
     },
     {
         "Unnamed: 0": 4,
@@ -33,7 +36,8 @@
         "exampleEng": "He gave her an ultimatum -- she could either stop seeing her other man and come back to him or it was divorce.",
         "exampleKor": "그는 그녀에게 최후통첩을 보냈다. 외간 남자와 만나는 것을 그만두고 그에게 돌아오든가 아니면 이혼하든가.",
         "option1": "첫 제안, 초안",
-        "option2": "협상, 제안"
+        "option2": "협상, 제안",
+        "star": "Merriam Webster"
     },
     {
         "Unnamed: 0": 5,
@@ -42,6 +46,7 @@
         "exampleEng": "I'm willing to help on any weekday, but I'm afraid my weekends are sacrosanct.",
         "exampleKor": "나는 주중에는 언제라도 도울 용의가 있지만, 주말은 신성 불가침이랍니다.",
         "option1": "평범한, 일상적인",
-        "option2": "신성한, 거룩한"
+        "option2": "신성한, 거룩한",
+        "star": "Merriam Webster"
     }
 ]

@@ -15,10 +15,10 @@ final class StarModel {
     var title: String
     
     @Relationship(deleteRule: .cascade) var words: [WordModel] = []
-    var progress: Int
+    var progress: Double = 0
 
     
-    init(id: UUID = UUID(), title: String, words: [WordModel], progress: Int) {
+    init(id: UUID = UUID(), title: String, words: [WordModel], progress: Double) {
         self.id = id
         self.title = title
         self.words = words

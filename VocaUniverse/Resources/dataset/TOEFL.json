@@ -6,7 +6,8 @@
         "exampleEng": "The astrologer used a zodiac to prepare my horoscope.",
         "exampleKor": "그 점성술사는 내 별점을 준비하기 위해 12궁도를 사용했다.",
         "option1": "별자리, 천궁도",
-        "option2": "달력, 연표"
+        "option2": "달력, 연표",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 2,
@@ -15,7 +16,8 @@
         "exampleEng": "I’ m very busy, so I won't be with you till 4 o' clock at the earliest.",
         "exampleKor": "너무 바빠서 아무리 일러도 4시 전에는 너와 함께 있을 수 없어.",
         "option1": "늦은, 최종의",
-        "option2": "초기의, 조기"
+        "option2": "초기의, 조기",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 3,
@@ -24,7 +26,8 @@
         "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
         "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다.",
         "option1": "무례함, 서투름",
-        "option2": "재치, 요령"
+        "option2": "재치, 요령",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 4,
@@ -33,7 +36,8 @@
         "exampleEng": "The report described the houses as unfit for human habitation.",
         "exampleKor": "보도에서 그 집들은 사람의 거주에 적당치 않은 곳으로 묘사되었다.",
         "option1": "빈집, 공터",
-        "option2": "주거지, 살 곳"
+        "option2": "주거지, 살 곳",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 5,
@@ -42,7 +46,8 @@
         "exampleEng": "The horse had to spend several months in quarantine when it reached Britain.",
         "exampleKor": "그 말은 영국에 도착하자 검역소에서 여러 달을 보내야 했다.",
         "option1": "격리 해제, 자유",
-        "option2": "격리, 검역"
+        "option2": "격리, 검역",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 6,
@@ -51,7 +56,8 @@
         "exampleEng": "I pulled on the reins and the horse obediently slowed down.",
         "exampleKor": "내가 고삐를 당기자 말은 고분고분하게 속도를 늦추었다.",
         "option1": "반항적으로, 불복종하게",
-        "option2": "순종적으로, 고분고분하게"
+        "option2": "순종적으로, 고분고분하게",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 7,
@@ -60,7 +66,8 @@
         "exampleEng": "We wanted to book a hotel room in July, but there were no vacancies.",
         "exampleKor": "우리는 7월에 호텔방을 예약하고 싶었는데 빈 방이 전혀 없었다.",
         "option1": "가득 찬, 점유된",
-        "option2": "빈 방, 공백"
+        "option2": "빈 방, 공백",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 8,
@@ -69,7 +76,8 @@
         "exampleEng": "The book documented the rise of the political right with its accompanying strands of nationalism and racism.",
         "exampleKor": "그 책은 정치적 권리의 상승과 그에 따른 국가주의 및 인종차별주의의 요소를 입증했다.",
         "option1": "국가주의, 애국심",
-        "option2": "국제주의, 세계주의"
+        "option2": "국제주의, 세계주의",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 9,
@@ -78,7 +86,8 @@
         "exampleEng": "The demonstrators walked along the street, waving banners and shouting angrily.",
         "exampleKor": "시위자들은 깃발을 흔들고 분노의 함성을 지르며 거리를 활보했다.",
         "option1": "현수막, 깃발",
-        "option2": "간판, 표지"
+        "option2": "간판, 표지",
+        "star": "TOEFL"
     },
     {
         "Unnamed: 0": 10,
@@ -87,6 +96,7 @@
         "exampleEng": "Smoking is banned in this restaurant.",
         "exampleKor": "이 식당에서는 흡연이 금지되어 있다.",
         "option1": "허용, 승인",
-        "option2": "금지, 차단"
+        "option2": "금지, 차단",
+        "star": "TOEFL"
     }
 ]

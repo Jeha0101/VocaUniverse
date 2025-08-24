@@ -24,12 +24,12 @@ struct FinishView: View {
     let star = "Star"
     
     private var solvedCount: SolvedCount {
-        let clamped = min(max(count, 1), 5)
-        return SolvedCount(intValue: clamped)! // 1~5 보장되므로 강제 언랩 안전
-    }
-    private var solvedCountImageName: String { solvedCount.imageName }
+            let clamped = min(max(count, 1), 5)
+            return SolvedCount(intValue: clamped)! // 1~5 보장되므로 강제 언랩 안전
+        }
+        private var solvedCountImageName: String { solvedCount.imageName }
     
-    
+
     var body: some View {
         ZStack {
             if goToMain {
@@ -88,13 +88,21 @@ struct FinishView: View {
             VStack {
                 Spacer()
                 
+//                BigButton(buttonTitle: buttonTitle, action: {
+//
+//                })
+
                 Button(action: {
-                    dismiss()
+                    //dismiss()
+                    withAnimation {
+                        goToMain = true
+                    }
+
                 }) {
                     BigButtonLabel(buttonTitle: buttonTitle)
                 }
-                .padding(.horizontal, 20)
-                .padding(.bottom, 40)
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 40)
             }
             .padding(.bottom, 50)
         }

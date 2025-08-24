@@ -70,8 +70,9 @@ struct DataBootstrapper {
                     exampleEng: word.exampleEng,
                     exampleKor: word.exampleKor,
                     isDone: false,
-                    option1: word.option1, //입시값
-                    option2: word.option2 //임시값
+                    option1: word.option1,
+                    option2: word.option2,
+                    star: word.star
                 )
             }
             
@@ -84,21 +85,6 @@ struct DataBootstrapper {
             //SwiftData에 저장
             context.insert(star)
             logger.info("Inserted StarModel: \(fileName) with \(wordModels.count) words.")
-            
-            //상세 로그 출력
-//            print("[\(fileName)] 로드 완료")
-//            print("총 단어 개수: \(wordModels.count)")
-//            for (index, word) in wordModels.enumerated() {
-//                print("""
-//                      \(index + 1). \(word.wordEng)
-//                         의미: \(word.meanKor)
-//                         예문(ENG): \(word.exampleEng)
-//                         예문(KOR): \(word.exampleKor)
-//                      """)
-//            }
-//            
-//            print("\(fileName) 데이터를 성공적으로 로드했습니다.")
-//            print("Star Title: \(star.title), Words Count: \(star.words.count)")
             
             try context.save()
             
@@ -114,6 +100,7 @@ struct DataBootstrapper {
         let exampleKor: String
         let option1: String
         let option2: String
+        let star: String
     }
     
     
