@@ -32,11 +32,11 @@
     {
         "Unnamed: 0": 4,
         "wordEng": "rail",
-        "meanKor": "난간, 울타리, 철도",
+        "meanKor": "철도",
         "exampleEng": "Environmentalists argue that more goods should be transported by rail.",
         "exampleKor": "환경론자들은 더 많은 물건을 철도로 운송해야 한다고 주장한다.",
-        "option1": "도로, 길",
-        "option2": "울타리, 난간",
+        "option1": "난간, 울타리",
+        "option2": "못",
         "star": "Reading and Vocabulary"
     },
     {

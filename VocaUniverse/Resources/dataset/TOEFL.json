@@ -5,7 +5,7 @@
         "meanKor": "12궁도",
         "exampleEng": "The astrologer used a zodiac to prepare my horoscope.",
         "exampleKor": "그 점성술사는 내 별점을 준비하기 위해 12궁도를 사용했다.",
-        "option1": "별자리, 천궁도",
+        "option1": "별자리",
         "option2": "달력, 연표",
         "star": "TOEFL"
     },
@@ -22,11 +22,11 @@
     {
         "Unnamed: 0": 3,
         "wordEng": "tact",
-        "meanKor": "감촉, 재치, 요령",
+        "meanKor": "감촉, 재치",
         "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
         "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다.",
         "option1": "무례함, 서투름",
-        "option2": "재치, 요령",
+        "option2": "요령",
         "star": "TOEFL"
     },
     {
@@ -46,7 +46,7 @@
         "exampleEng": "The horse had to spend several months in quarantine when it reached Britain.",
         "exampleKor": "그 말은 영국에 도착하자 검역소에서 여러 달을 보내야 했다.",
         "option1": "격리 해제, 자유",
-        "option2": "격리, 검역",
+        "option2": "숙소",
         "star": "TOEFL"
     },
     {
@@ -56,7 +56,7 @@
         "exampleEng": "I pulled on the reins and the horse obediently slowed down.",
         "exampleKor": "내가 고삐를 당기자 말은 고분고분하게 속도를 늦추었다.",
         "option1": "반항적으로, 불복종하게",
-        "option2": "순종적으로, 고분고분하게",
+        "option2": "순종적으로",
         "star": "TOEFL"
     },
     {
@@ -86,7 +86,7 @@
         "exampleEng": "The demonstrators walked along the street, waving banners and shouting angrily.",
         "exampleKor": "시위자들은 깃발을 흔들고 분노의 함성을 지르며 거리를 활보했다.",
         "option1": "현수막, 깃발",
-        "option2": "간판, 표지",
+        "option2": "간판",
         "star": "TOEFL"
     },
     {
@@ -96,7 +96,7 @@
         "exampleEng": "Smoking is banned in this restaurant.",
         "exampleKor": "이 식당에서는 흡연이 금지되어 있다.",
         "option1": "허용, 승인",
-        "option2": "금지, 차단",
+        "option2": "차단",
         "star": "TOEFL"
     }
 ]

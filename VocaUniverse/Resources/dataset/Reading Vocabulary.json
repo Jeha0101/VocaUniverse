@@ -6,7 +6,7 @@
         "exampleEng": "Although other people can advise him, the ultimate decision about whom to employ lies with Andrew.",
         "exampleKor": "다른 사람들이 충고를 할 수는 있지만 누구를 고용할 것인가를 최후로 결정하는 사람은 앤드류이다.",
         "option1": "중간의, 일시적인",
-        "option2": "최종의, 결정적인",
+        "option2": "결정적인",
         "star": "Reading Vocabulary"
     },
     {
@@ -35,8 +35,8 @@
         "meanKor": "난간, 울타리, 철도",
         "exampleEng": "Environmentalists argue that more goods should be transported by rail.",
         "exampleKor": "환경론자들은 더 많은 물건을 철도로 운송해야 한다고 주장한다.",
-        "option1": "늦은, 최종의",
-        "option2": "초기의, 조기",
+        "option1": "줄",
+        "option2": "못",
         "star": "Reading Vocabulary"
     },
     {
@@ -45,7 +45,7 @@
         "meanKor": "열성적인, 열광적인",
         "exampleEng": "He has remained a zealous supporter of the government's policies.",
         "exampleKor": "그는 정부 정책의 열성적 지지자로 남아 있었다.",
-        "option1": "열정적인, 적극적인",
+        "option1": "적극적인",
         "option2": "무관심한, 냉담한",
         "star": "Reading Vocabulary"
     }
