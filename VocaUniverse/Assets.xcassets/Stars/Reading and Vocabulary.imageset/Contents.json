@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Reading & Vocabulary.svg",
+      "filename" : "Reading and Vocabulary.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Reading and Vocabulary@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Reading and Vocabulary@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
