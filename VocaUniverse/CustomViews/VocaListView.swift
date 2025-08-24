@@ -59,8 +59,10 @@ struct VocaListView: View {
             VStack {
                 HStack {
                     Button {
-                        goToStar = true
-                        goToVocaList = false
+                        withAnimation {
+                            goToStar = true
+                            goToVocaList = false
+                        }
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 22, weight: .bold))
