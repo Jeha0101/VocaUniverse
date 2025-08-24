@@ -60,8 +60,10 @@ struct VocaListView: View {
                 CustomToolBar(
                     showXMark: true,
                     xAction: {
-                        goToStar = true
-                        goToVocaList = false
+                        withAnimation {
+                            goToStar = true
+                            goToVocaList = false
+                        }
                     },
                     title: stars[starName].title)
                 .padding(.bottom, 26)

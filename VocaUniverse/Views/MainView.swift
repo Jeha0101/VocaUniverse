@@ -46,10 +46,38 @@ struct MainView: View {
             Image(mainViewBackground)
                 .resizable()
                 .ignoresSafeArea()
+            
             Image(starsBackground)
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+            
+            
+            VStack {
+                Spacer()
+                Image(hill)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 379)
+            }
+            
+            VStack {
+                Spacer()
+                Image(wowCatLying)
+                    .resizable()
+                    .frame(width: 212, height: 212)
+                    .padding(.bottom, 145)
+            }
+            
+            VStack(spacing: 0) {
+                CustomToolBar(
+                    xAction: {},
+                    title: title
+                )
+                
+                Spacer(minLength: 0)
+
+            }
             
             VStack(spacing: 45){
                 Spacer()
@@ -83,33 +111,6 @@ struct MainView: View {
                 
                 
             }
-            
-            
-            VStack {
-                Spacer()
-                Image(hill)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 379)
-            }
-            
-            VStack {
-                Spacer()
-                Image(wowCatLying)
-                    .resizable()
-                    .frame(width: 212, height: 212)
-                    .padding(.bottom, 145)
-            }
-            
-            VStack(spacing: 0) {
-                CustomToolBar(
-                    xAction: {},
-                    title: title
-                )
-                
-                Spacer(minLength: 0)
-
-            }
         }
         .onAppear {
             print("=== 저장된 StarModel 데이터 ===")
@@ -135,7 +136,7 @@ struct MainView: View {
         .toolbar(.hidden, for: .navigationBar)
     }
     
-    // 별 버튼 생성 함수
+    // 별 버튼 생성
     private func starButton(imageName: String, index: Int, size: CGSize) -> some View {
         
         let progress = stars.indices.contains(index) ? stars[index].progress : 0.0
