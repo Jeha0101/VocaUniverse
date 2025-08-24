@@ -38,7 +38,8 @@ struct StarView: View {
             }
         }
         .animation(.easeInOut(duration: 0.5), value: goToQuiz)
-        
+    }
+    
     var starview: some View {
         ZStack(alignment: .top) {
             
