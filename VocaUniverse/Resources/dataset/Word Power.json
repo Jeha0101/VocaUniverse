@@ -5,17 +5,17 @@
         "meanKor": "감촉, 재치, 요령",
         "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
         "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다.",
-        "option1": "요령, 재치",
+        "option1": "요령",
         "option2": "무례함, 서투름",
         "star": "Word Power"
     },
     {
         "Unnamed: 0": 2,
         "wordEng": "pacify",
-        "meanKor": "달래다, 진정시키다, 평화를 회복시키다",
+        "meanKor": "진정시키다, 평화를 회복시키다",
         "exampleEng": "It was difficult for the police to pacify the angry crowd.",
         "exampleKor": "경찰이 성난 군중을 진정시키기란 힘든 일이었다.",
-        "option1": "진정시키다, 달래다",
+        "option1": "달래다",
         "option2": "화나게 하다, 자극하다",
         "star": "Word Power"
     },
@@ -25,14 +25,14 @@
         "meanKor": "요구되는, 의무적인, 필수의",
         "exampleEng": "The medical examination before you start work is obligatory.",
         "exampleKor": "일을 시작하기 전에 의학 시험을 보는 것이 의무이다.",
-        "option1": "의무적인, 필수의",
+        "option1": "필요한",
         "option2": "선택적인, 자유로운",
         "star": "Word Power"
     },
     {
         "Unnamed: 0": 4,
         "wordEng": "object",
-        "meanKor": "물체, 목적, 반대하다",
+        "meanKor": "반대하다",
         "exampleEng": "The object of their expedition was to discover the source of the River Nile.",
         "exampleKor": "그들이 기획한 원정의 목적은 나일강의 원류를 찾는 것이었다.",
         "option1": "목적, 물체",
@@ -45,7 +45,7 @@
         "meanKor": "혼란시키다, 당황케하다",
         "exampleEng": "Then she was criticized for using arguments that obfuscated the main issue.",
         "exampleKor": "그 때 그녀는 주요 문제를 혼란시키는 논거를 사용했다고 비난받았다.",
-        "option1": "혼란시키다, 당황하게 하다",
+        "option1": "반대하다",
         "option2": "명확하게 하다, 이해시키다",
         "star": "Word Power"
     }

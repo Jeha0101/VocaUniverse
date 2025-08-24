@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Vocabulary 22000.svg",
+      "filename" : "Vocabulary 22000.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Vocabulary 22000@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Vocabulary 22000@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

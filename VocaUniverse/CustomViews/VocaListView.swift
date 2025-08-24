@@ -57,10 +57,6 @@ struct VocaListView: View {
             }
             
             VStack {
-//                HStack {
-////                    Spacer().frame(height:30)
-//                    
-//                }
                 CustomToolBar(
                     showXMark: true,
                     xAction: {
