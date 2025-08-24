@@ -28,123 +28,95 @@ struct StarView: View {
     
     var body: some View {
         ZStack {
-            if goToQuiz {
-                VocaView(wordList: stars[starName].words, goToQuiz: $goToQuiz, goToStar: $goToStar)
+            if goToVocaList {
+                VocaListView(goToVocaList: $goToVocaList, goToStar: $goToStar, stars: stars, starName: starName)
                     .transition(.opacity)
-                    
+                
             } else {
                 starview
                     .transition(.opacity)
             }
-            
         }
         .animation(.easeInOut(duration: 0.5), value: goToQuiz)
-        //.animation(.easeInOut(duration: 0.5))
         
-//        ZStack(alignment: .top) {
-//            
-//            Image(mainViewBackground)
-//                .resizable()
-//                .ignoresSafeArea()
-//            Image(starsBackground)
-//                .resizable()
-//                .scaledToFill()
-//                .ignoresSafeArea()
-//            
-//
-//            VStack(spacing: 0) {
-//                Spacer().frame(height: 40)
-//                
-//                TitleBadge(text: stars[starName].title)
-//                    .padding(.top, 80)
-//                    .padding(.horizontal, 109)
-//                
-//                Spacer(minLength: 0)
-//                
-//                Image(stars[starName].title)
-//                    .resizable()
-//                    .frame(width: 280, height: 280)
-//                
-//                Spacer()
-//                
-//                NavigationLink(destination: VocaView(wordList: stars[starName].words)) {
-//                    BigButton(buttonTitle: quizTitle)
-//                        .padding(.horizontal, 20)
-//                        .padding(.bottom, 14)
-//                }
-//                
-//                
-//                BigButton(buttonTitle: vocaTitle)
-//                    .padding(.horizontal, 20)
-//                    .padding(.bottom, 40)
-//                
-//                //Spacer().frame(height: 40)
-//            }
-//            .padding(.bottom, 100)
-//            //.toolbar(.hidden, for: .navigationBar)
-        }
-        
-        var starview: some View {
-            ZStack(alignment: .top) {
+    var starview: some View {
+        ZStack(alignment: .top) {
+            
+            Image(mainViewBackground)
+                .resizable()
+                .ignoresSafeArea()
+            Image(starsBackground)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            
+            
+            VStack(spacing: 0) {
+                //                    Spacer().frame(height: 40)
                 
-                Image(mainViewBackground)
-                    .resizable()
-                    .ignoresSafeArea()
-                Image(starsBackground)
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                
-
-                VStack(spacing: 0) {
-                    Spacer().frame(height: 40)
-                    
-                    ZStack {
-                        Button {
-                            withAnimation {
-                                goToStar = false
-                            }
-                        } label: {
-                            Image(systemName: "xmark")
-                                .font(.system(size: 22, weight: .bold))
-                                .foregroundStyle(.white)
-                                .padding(.trailing, 16)
+                ZStack {
+                    Button {
+                        withAnimation {
+                            goToStar = false
                         }
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 22, weight: .bold))
+                            .foregroundStyle(.white)
+                            .padding(.trailing, 16)
+                    }
+                    .padding(.top, 80)
+                    .offset(x: -160)
+                    
+                    TitleBadge(text: stars[starName].title)
                         .padding(.top, 80)
-                                     .offset(x: -160)
-                        
-                        TitleBadge(text: stars[starName].title)
-                            .padding(.top, 80)
-                            .padding(.horizontal, 109)
-                        
-                    }
+                        .padding(.horizontal, 109)
                     
-                    Spacer(minLength: 0)
-                    
-                    Image(stars[starName].title)
-                        .resizable()
-                        .frame(width: 280, height: 280)
-                    
-                    Spacer().frame(height: 140)
-                    
-                    NavigationLink(destination: VocaView(wordList: stars[starName].words, goToQuiz: $goToQuiz, goToStar: $goToStar)) {
-                        BigButtonLabel(buttonTitle: quizTitle)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 14)
-                    }
-                    
-                    BigButtonLabel(buttonTitle: vocaTitle)
-                    .padding(.horizontal, 20)
-                    .padding(.bottom, 40)
-                    
-                    //Spacer().frame(height: 40)
                 }
-                .padding(.bottom, 100)
-                //.toolbar(.hidden, for: .navigationBar)
+                
+                Spacer().frame(height: 110)
+                
+                Image(stars[starName].title)
+                    .resizable()
+                    .frame(width: 280, height: 280)
+                
+                Spacer().frame(height: 140)
+                
+                NavigationLink(destination: VocaView(wordList: stars[starName].words, goToQuiz: $goToQuiz, goToStar: $goToStar)) {
+                    BigButtonLabel(buttonTitle: quizTitle)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 14)
+                }
+                Button(action: {
+                    goToVocaList = true
+                }) {
+                    BigButtonLabel(buttonTitle: vocaTitle)
+                }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 40)
             }
+        }
     }
 }
 
-#Preview {
-    //tarView(stars: <#[StarModel]#>, title: "ddd")
+
+private struct StarViewPreviewWrapper: View {
+    @State private var goToStar: Bool = true
+
+    // 샘플 스타 데이터 (words는 비워도 OK)
+    private let stars: [StarModel] = [
+        StarModel(title: "Level 1", words: [], progress: 0),
+        StarModel(title: "Level 2", words: [], progress: 50)
+    ]
+
+    var body: some View {
+        StarView(goToStar: $goToStar, stars: stars, starName: 0)
+    }
+}
+
+// MARK: Preview
+#Preview("StarView") {
+    StarViewPreviewWrapper()
+    // SwiftData 프리뷰용 in-memory 컨테이너
+        .modelContainer(for: [StarModel.self, WordModel.self], inMemory: true)
 }
