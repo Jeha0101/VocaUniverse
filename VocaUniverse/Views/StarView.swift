@@ -89,7 +89,9 @@ struct StarView: View {
                         .padding(.bottom, 14)
                 }
                 Button(action: {
-                    goToVocaList = true
+                    withAnimation {
+                        goToVocaList = true
+                    }
                 }) {
                     BigButtonLabel(buttonTitle: vocaTitle)
                 }
@@ -97,6 +99,7 @@ struct StarView: View {
                 .padding(.bottom, 40)
             }
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
 

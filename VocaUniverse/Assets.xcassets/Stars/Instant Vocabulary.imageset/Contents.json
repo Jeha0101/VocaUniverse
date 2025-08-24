@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Instant Vocabulary.svg",
+      "filename" : "Instant Vocabulary.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Instant Vocabulary@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Instant Vocabulary@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

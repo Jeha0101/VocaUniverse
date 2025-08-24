@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Word Power.svg",
+      "filename" : "Word Power.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Word Power@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Word Power@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

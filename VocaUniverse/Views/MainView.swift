@@ -77,6 +77,7 @@ struct MainView: View {
                     starButton(imageName: "Vocabulary 22000", index: 6, size: CGSize(width: 51, height: 51))
                         .offset(x: 35, y: -50)
                     starButton(imageName: "Instant Vocabulary", index: 2, size: CGSize(width: 80, height: 80))
+                        .rotationEffect(.degrees(-45))
                 }
                 .padding(.bottom, 300)
                 

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "MerriamWebsterButton.svg",
+      "filename" : "Merriam Webster.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Merriam Webster@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Merriam Webster@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

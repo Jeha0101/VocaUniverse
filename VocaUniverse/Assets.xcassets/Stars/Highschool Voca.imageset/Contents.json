@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "HighschoolVoca.svg",
+      "filename" : "HighSchool Voca.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "HighSchool Voca@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "HighSchool Voca@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
