@@ -25,7 +25,7 @@ struct MainView: View {
     let wowCatLying  = "WowCatLying"
     
     
-
+    
     var body: some View {
         ZStack {
             if goToStar, let index = selectedStarIndex {
@@ -37,7 +37,7 @@ struct MainView: View {
             }
         }
         .animation(.easeInOut(duration: 0.5), value: goToStar)
-
+        
     }
     
     var mainview: some View {
@@ -79,10 +79,10 @@ struct MainView: View {
                     starButton(imageName: "Instant Vocabulary", index: 2, size: CGSize(width: 80, height: 80))
                 }
                 .padding(.bottom, 300)
-
+                
                 
             }
-
+            
             
             VStack {
                 Spacer()
@@ -91,7 +91,7 @@ struct MainView: View {
                     .scaledToFill()
                     .frame(height: 379)
             }
-
+            
             VStack {
                 Spacer()
                 Image(wowCatLying)
@@ -107,11 +107,11 @@ struct MainView: View {
                 
                 Spacer(minLength: 0)
                 
-    //                NavigationLink(destination: StarView(stars: stars) {
-    //                    BigButton(buttonTitle: buttonTitle)
-    //                        .padding(.horizontal, 20)
-    //                        .padding(.bottom, 40)
-    //                }
+                //                NavigationLink(destination: StarView(stars: stars) {
+                //                    BigButton(buttonTitle: buttonTitle)
+                //                        .padding(.horizontal, 20)
+                //                        .padding(.bottom, 40)
+                //                }
             }
         }
         .onAppear {

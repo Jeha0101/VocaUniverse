@@ -76,7 +76,7 @@ struct FinishView: View {
                     .scaledToFill()
                     .frame(height: 379)
             }
-
+            
             VStack {
                 Spacer()
                 Image(wowCat)
