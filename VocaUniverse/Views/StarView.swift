@@ -51,37 +51,30 @@ struct StarView: View {
                 .scaledToFill()
                 .ignoresSafeArea()
             
+            VStack {
+                Spacer()
+                Image(hill)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 379)
+            }
+            
             
             VStack(spacing: 0) {
-                //                    Spacer().frame(height: 40)
+                CustomToolBar(
+                    showXMark: true,
+                    xAction: {withAnimation {
+                        goToStar = false
+                    }},
+                    title: stars[starName].title)
                 
-                ZStack {
-                    Button {
-                        withAnimation {
-                            goToStar = false
-                        }
-                    } label: {
-                        Image(systemName: "xmark")
-                            .font(.system(size: 22, weight: .bold))
-                            .foregroundStyle(.white)
-                            .padding(.trailing, 16)
-                    }
-                    .padding(.top, 80)
-                    .offset(x: -160)
-                    
-                    TitleBadge(text: stars[starName].title)
-                        .padding(.top, 80)
-                        .padding(.horizontal, 109)
-                    
-                }
-                
-                Spacer().frame(height: 110)
+                Spacer().frame(maxHeight: 110)
                 
                 Image(stars[starName].title)
                     .resizable()
                     .frame(width: 280, height: 280)
                 
-                Spacer().frame(height: 140)
+                Spacer().frame(maxHeight: 140)
                 
                 NavigationLink(destination: VocaView(wordList: stars[starName].words, goToQuiz: $goToQuiz, goToStar: $goToStar)) {
                     BigButtonLabel(buttonTitle: quizTitle)
@@ -106,13 +99,13 @@ struct StarView: View {
 
 private struct StarViewPreviewWrapper: View {
     @State private var goToStar: Bool = true
-
+    
     // 샘플 스타 데이터 (words는 비워도 OK)
     private let stars: [StarModel] = [
         StarModel(title: "Level 1", words: [], progress: 0),
         StarModel(title: "Level 2", words: [], progress: 50)
     ]
-
+    
     var body: some View {
         StarView(goToStar: $goToStar, stars: stars, starName: 0)
     }

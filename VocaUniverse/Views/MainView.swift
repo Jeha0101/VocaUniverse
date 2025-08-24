@@ -102,9 +102,10 @@ struct MainView: View {
             }
             
             VStack(spacing: 0) {
-                TitleBadge(text: title)
-                    .padding(.top, 80)
-                    .padding(.horizontal, 76)
+                CustomToolBar(
+                    xAction: {},
+                    title: title
+                )
                 
                 Spacer(minLength: 0)
 

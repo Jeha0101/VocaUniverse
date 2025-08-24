@@ -57,23 +57,13 @@ struct VocaListView: View {
             }
             
             VStack {
-                HStack {
-                    Button {
-                        withAnimation {
-                            goToStar = true
-                            goToVocaList = false
-                        }
-                    } label: {
-                        Image(systemName: "xmark")
-                            .font(.system(size: 22, weight: .bold))
-                            .foregroundStyle(.white)
-                    }
-                    Spacer()
-                    TitleBadge(text: stars[starName].title)
-                    Spacer()
-                }
-                .padding(.horizontal, 20)
-                .padding(.top, 50)
+                CustomToolBar(
+                    showXMark: true,
+                    xAction: {
+                        goToStar = true
+                        goToVocaList = false
+                    },
+                    title: stars[starName].title)
                 .padding(.bottom, 26)
                 
                 ZStack { // MARK: 단어장 큰 네모
