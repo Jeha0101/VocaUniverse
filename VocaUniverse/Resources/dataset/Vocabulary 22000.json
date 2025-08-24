@@ -22,30 +22,30 @@
     {
         "Unnamed: 0": 3,
         "wordEng": "tact",
-        "meanKor": "감촉, 재치, 요령",
+        "meanKor": "감촉, 재치",
         "exampleEng": "The young nurse showed great tact in dealing with worried parents.",
         "exampleKor": "그 젊은 간호사는 걱정에 찬 부모들을 대하는 데 대단한 재치를 보여 주었다.",
-        "option1": "요령, 재치",
+        "option1": "요령",
         "option2": "무례함, 서투름",
         "star": "Vocabulary 22000"
     },
     {
         "Unnamed: 0": 4,
         "wordEng": "banter",
-        "meanKor": "놀리다, (악의 없는) 희롱",
+        "meanKor": "(악의 없는) 희롱",
         "exampleEng": "I grew weary of his bantering style of conversation.",
         "exampleKor": "나는 조롱하는 듯한 그의 대화 스타일에 싫증이 났다.",
-        "option1": "농담, 희롱",
+        "option1": "놀리다",
         "option2": "진지함, 꾸짖음",
         "star": "Vocabulary 22000"
     },
     {
         "Unnamed: 0": 5,
         "wordEng": "abide",
-        "meanKor": "머무르다, 살다, 지속하다",
+        "meanKor": "머무르다, 살다",
         "exampleEng": "He abided in the wilderness for forty days.",
         "exampleKor": "그는 40일 동안을 광야에서 생활했다.",
-        "option1": "머무르다, 살다",
+        "option1": "지속하다",
         "option2": "떠나다, 떠나가다",
         "star": "Vocabulary 22000"
     }

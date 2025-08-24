@@ -61,7 +61,7 @@ struct MainView: View {
                 }
                 
                 HStack(spacing: 62) {
-                    starButton(imageName: "Highschool Voca", index: 1, size: CGSize(width: 49, height: 49))
+                    starButton(imageName: "HighSchool Voca", index: 1, size: CGSize(width: 49, height: 49))
                         .offset(x: -25)
                     starButton(imageName: "Merriam Webster", index: 3, size: CGSize(width: 59, height: 59))
                         .offset(y: -40)
@@ -106,12 +106,7 @@ struct MainView: View {
                     .padding(.horizontal, 76)
                 
                 Spacer(minLength: 0)
-                
-                //                NavigationLink(destination: StarView(stars: stars) {
-                //                    BigButton(buttonTitle: buttonTitle)
-                //                        .padding(.horizontal, 20)
-                //                        .padding(.bottom, 40)
-                //                }
+
             }
         }
         .onAppear {
@@ -140,7 +135,11 @@ struct MainView: View {
     
     // 별 버튼 생성 함수
     private func starButton(imageName: String, index: Int, size: CGSize) -> some View {
-        Button {
+        
+        let progress = stars.indices.contains(index) ? stars[index].progress : 0.0
+        let opacity = opacityForProgress(progress)
+        
+        return Button {
             withAnimation {
                 selectedStarIndex = index
                 goToStar = true
@@ -149,8 +148,27 @@ struct MainView: View {
             Image(imageName)
                 .resizable()
                 .frame(width: size.width, height: size.height)
+                .opacity(opacity)
         }
         .buttonStyle(PlainButtonStyle())
+    }
+    
+    // 진행도에 따른 별의 투명도 조절
+    private func opacityForProgress(_ progress: Double) -> Double {
+        switch progress {
+        case 1.0:
+            return 1.0
+        case 0.8...:
+            return 0.8
+        case 0.6...:
+            return 0.6
+        case 0.4...:
+            return 0.5
+        case 0.2...:
+            return 0.4
+        default:
+            return 0.2
+        }
     }
     
 }
