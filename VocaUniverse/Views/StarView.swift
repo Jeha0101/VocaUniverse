@@ -51,6 +51,14 @@ struct StarView: View {
                 .scaledToFill()
                 .ignoresSafeArea()
             
+            VStack {
+                Spacer()
+                Image(hill)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 379)
+            }
+            
             
             VStack(spacing: 0) {
                 CustomToolBar(
